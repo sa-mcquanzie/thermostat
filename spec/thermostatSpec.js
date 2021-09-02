@@ -1,6 +1,6 @@
 'use strict';
 
-describe ('Thermostat', () => {
+describe('Thermostat', () => {
   let thermostat;
 
   beforeEach(() => {
@@ -46,6 +46,16 @@ describe ('Thermostat', () => {
 
     expect(thermostat.isPowerSavingModeOn()).toBe(true);
   });
-})
+
+  describe('when Power Saving Mode is on', () => {
+    it('has a maximum temperature of 25', () => {
+      for (let i = 0; i < 6; i++) {
+        thermostat.up();
+      }
+
+      expect(thermostat.getCurrentTemperature()).toEqual(25);
+    });
+  });
+});
 
 
