@@ -16,4 +16,17 @@ describe ('Thermostat', () => {
 
     expect(thermostat.getCurrentTemperature()).toEqual(21);
   })
+   it ('decreases temperature with down()',  () => {
+     thermostat.down();
+     expect(thermostat.getCurrentTemperature()).toEqual(19);
+   });
+
+   
+
+
+
+
+
 })
+
+
